@@ -23,8 +23,10 @@ then run `python3 scripts/build_site.py`.
     at the next manual re-check, not automatically.
   - Dates only move forward on a successful fetch; a failed run keeps the
     last good numbers and their dates.
-- Visitor counter: GoatCounter (no cookies), script at the bottom of
-  `index.html`; dashboard `https://mahmoud-abdelatty.goatcounter.com`.
+- Visitor counter: GoatCounter (no cookies). Every page footer shows the
+  number of unique visitors to the site, read from GoatCounter's public
+  TOTAL endpoint (cached up to four hours). Dashboard
+  `https://mahmoud-abdelatty.goatcounter.com`.
 
 ## Stack (free tier, $0)
 
