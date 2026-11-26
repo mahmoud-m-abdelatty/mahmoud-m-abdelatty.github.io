@@ -99,13 +99,14 @@ Dashboard: https://mahmoud-abdelatty.goatcounter.com -->
 <script data-goatcounter="https://mahmoud-abdelatty.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 """
 
-# Visible counter: reads GoatCounter's public per-page JSON endpoint
-# (requires the GoatCounter setting "Allow adding visitor counts on your website").
-# count_unique = unique visitors GoatCounter recorded for THIS page's path.
+# Visible counter: reads GoatCounter's public TOTAL endpoint (all pages, all time).
+# Requires the GoatCounter setting "Allow adding visitor counts on your website".
+# count_unique = unique visitors GoatCounter recorded for the whole site.
+# GoatCounter caches this endpoint for up to four hours, so the number lags.
 VISITS_SNIPPET = """
-<p class="small" id="site-visits" hidden>Unique visitors to this page: <span id="sv-count"></span></p>
+<p class="small" id="site-visits" hidden>Unique visitors to this site: <span id="sv-count"></span></p>
 <script>
-fetch('https://mahmoud-abdelatty.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json')
+fetch('https://mahmoud-abdelatty.goatcounter.com/counter/TOTAL.json')
   .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
   .then(function (d) {
     document.getElementById('sv-count').textContent = d.count_unique;
