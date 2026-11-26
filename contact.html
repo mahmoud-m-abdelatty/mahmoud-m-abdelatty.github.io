@@ -75,9 +75,9 @@ Dashboard: https://mahmoud-abdelatty.goatcounter.com -->
 <script data-goatcounter="https://mahmoud-abdelatty.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 
-<p class="small" id="site-visits" hidden>Unique visitors to this page: <span id="sv-count"></span></p>
+<p class="small" id="site-visits" hidden>Unique visitors to this site: <span id="sv-count"></span></p>
 <script>
-fetch('https://mahmoud-abdelatty.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json')
+fetch('https://mahmoud-abdelatty.goatcounter.com/counter/TOTAL.json')
   .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
   .then(function (d) {
     document.getElementById('sv-count').textContent = d.count_unique;
