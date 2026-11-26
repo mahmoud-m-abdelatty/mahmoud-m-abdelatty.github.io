@@ -1,0 +1,23 @@
+name: Refresh citation metrics
+on:
+  schedule:
+    - cron: '17 3 * * 1'   # weekly, Monday 03:17 UTC
+  workflow_dispatch:        # allows a manual run from the Actions tab
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Refresh data and rebuild pages
+        run: |
+          python3 scripts/update_metrics.py
+          python3 scripts/build_site.py
+      - name: Commit if anything changed
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore: weekly citation metrics refresh'

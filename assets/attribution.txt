@@ -1,0 +1,10 @@
+Figure credits
+
+The four figures in this folder are reproduced from:
+
+Abdelatty, M. M. et al. Rational design and antibacterial assessment of novel
+pyranopyrazole derivatives: a combined experimental and in silico study.
+Scientific Reports 16, 11621 (2026). https://doi.org/10.1038/s41598-026-37625-5
+
+Open access article distributed under the Creative Commons CC BY 4.0 license
+(https://creativecommons.org/licenses/by/4.0/).

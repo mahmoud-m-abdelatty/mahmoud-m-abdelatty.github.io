@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahmoud M. Abdelatty - Fayoum University</title>
+<style>
+body { font-family: 'Times New Roman', Times, serif; margin: 0; color: #1a1a1a; background: #fff; }
+header.site { border-bottom: 3px double #1a3a5c; padding: 28px 20px 18px; max-width: 900px; margin: 0 auto; }
+header.site h1 { font-size: 30px; margin: 0 0 4px; color: #1a3a5c; }
+header.site .role { font-size: 17px; color: #444; }
+nav.site { max-width: 900px; margin: 0 auto; padding: 10px 20px; border-bottom: 1px solid #ccc; font-size: 16px; }
+nav.site a { margin-right: 22px; color: #1a3a5c; }
+main { max-width: 900px; margin: 0 auto; padding: 12px 20px 60px; }
+h2 { font-size: 22px; color: #1a3a5c; border-bottom: 1px solid #ccc; padding-bottom: 4px; margin-top: 36px; }
+p, li { font-size: 16px; line-height: 1.55; text-align: justify; }
+.mwrap { overflow-x: auto; }
+table.metrics { border-collapse: collapse; margin: 10px 0; }
+table.metrics th, table.metrics td { border: 1px solid #bbb; padding: 6px 14px; font-size: 15px; text-align: left; }
+table.metrics th { background: #eef2f6; }
+.pub { margin: 0 0 14px; }
+.pub .status { font-weight: bold; }
+.small { font-size: 13px; color: #666; }
+a { color: #1a3a5c; }
+.carousel { margin: 14px 0 4px; text-align: center; }
+.carousel img { max-width: 100%; max-height: 430px; border: 1px solid #ddd; padding: 8px; background: #fff; }
+.carousel .bar { margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 14px; }
+.carousel button { font-family: inherit; font-size: 20px; width: 40px; height: 36px; cursor: pointer; }
+.carousel .cap { font-size: 14px; color: #555; }
+.dots span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ccc; margin: 6px 3px 0; }
+.dots span.on { background: #1a3a5c; }
+form.contact label { display: block; margin: 14px 0 4px; font-size: 16px; }
+form.contact input, form.contact textarea { width: 100%; max-width: 560px; font-family: inherit; font-size: 16px; padding: 8px; border: 1px solid #999; }
+form.contact button { margin-top: 16px; font-family: inherit; font-size: 17px; padding: 10px 26px; background: #1a3a5c; color: #fff; border: 0; cursor: pointer; }
+footer { max-width: 900px; margin: 0 auto; padding: 18px 20px 40px; border-top: 1px solid #ccc; font-size: 13px; color: #666; }
+</style>
+</head>
+<body>
+<header class="site">
+  <h1>Mahmoud M. Abdelatty</h1>
+  <div class="role">Instructor and researcher, Chemistry Department, Faculty of Science, Fayoum University, Egypt</div>
+</header>
+<nav class="site">
+  <a href="index.html">Profile</a>
+  <a href="index.html#publications">Publications</a>
+  <a href="index.html#metrics">Metrics</a>
+  <a href="contact.html">Contact &amp; collaboration</a>
+</nav>
+
+<main>
+<h2>About</h2>
+<p>I am an instructor in the Chemistry Department, Faculty of Science, Fayoum University, Egypt. My research combines organic synthesis with materials chemistry: heterocyclic compounds and molecular docking, benzoxazine-based polymers for supercapacitors, and MOF-based composites for tumor therapy.</p>
+
+<h2>Selected figures from my research</h2>
+<div class="carousel">
+  <img id="acad-img" src="assets/pub-scheme1.png" alt="Scheme 1: synthesis routes of the pyranopyrazole derivatives">
+  <div class="bar">
+    <button type="button" onclick="acad_show(acad_i-1)" aria-label="Previous figure">&lsaquo;</button>
+    <span class="cap" id="acad-cap">Scheme 1. Synthesis of the pyranopyrazole derivatives.</span>
+    <button type="button" onclick="acad_show(acad_i+1)" aria-label="Next figure">&rsaquo;</button>
+  </div>
+  <div class="dots"><span class="on"></span><span class=""></span><span class=""></span><span class=""></span></div>
+</div>
+<p class="small">Figures from: Abdelatty, M. M. et al. Rational design and antibacterial assessment of novel pyranopyrazole derivatives. Scientific Reports 16, 11621 (2026). Open access, CC BY 4.0.</p>
+<script>
+let acad_i = 0;
+const acad_figs = [["assets/pub-scheme1.png", "Scheme 1: synthesis routes of the pyranopyrazole derivatives", "Scheme 1. Synthesis of the pyranopyrazole derivatives."], ["assets/pub-fig-antibacterial.png", "Bar chart of inhibition zones for the pyranopyrazole derivatives against four bacterial strains", "Fig. 1. Antibacterial activity against different bacterial strains."], ["assets/pub-fig-homolumo.png", "HOMO and LUMO frontier molecular orbital surfaces for compounds 2a, 4a, 5a, 7a and 8a", "Fig. 2. Frontier molecular orbitals (HOMO and LUMO)."], ["assets/pub-fig-mep.png", "Molecular electrostatic potential maps of the most active derivatives", "Fig. 5. Molecular electrostatic potential maps of the most active derivatives."]];
+function acad_show(i) {
+  acad_i = (i + acad_figs.length) % acad_figs.length;
+  const f = acad_figs[acad_i];
+  document.getElementById('acad-img').src = f[0];
+  document.getElementById('acad-img').alt = f[1];
+  document.getElementById('acad-cap').textContent = f[2];
+  document.querySelectorAll('.dots span').forEach((d, k) => d.className = k === acad_i ? 'on' : '');
+}
+setInterval(() => acad_show(acad_i + 1), 4500);
+</script>
+
+<h2 id="metrics">Citation metrics</h2>
+<div class="mwrap"><table class="metrics">
+<tr><th>Database</th><th>Citations</th><th>h-index</th><th>i10-index</th><th>Update</th><th>Figures as of</th></tr><tr><td>Google Scholar</td><td>17</td><td>3</td><td>1</td><td>manual re-check</td><td>2026-11-26</td></tr><tr><td>Scopus</td><td>14</td><td>2</td><td>-</td><td>manual re-check</td><td>2026-11-26</td></tr><tr><td>OpenAlex</td><td>21</td><td>3</td><td>-</td><td>automatic (weekly)</td><td>2026-11-26</td></tr>
+</table></div>
+<p class="small">Each row keeps its own date: it changes only when that database's figures were last successfully checked. OpenAlex refreshes weekly once the included GitHub Actions workflow is deployed; Google Scholar has no public API and Scopus needs an Elsevier API key, so those rows are re-checked manually. Databases index different sources, so counts differ.</p>
+<p>Profiles:
+<a href="https://scholar.google.com/citations?user=Wxlva7YAAAAJ&hl=en">Google Scholar</a> &middot;
+<a href="https://www.scopus.com/authid/detail.uri?authorId=58703124300">Scopus (58703124300)</a> &middot;
+<a href="https://orcid.org/0000-0002-8136-8397">ORCID (0000-0002-8136-8397)</a> &middot;
+<a href="https://www.webofscience.com/wos/author/record/JBI-7603-2023">Web of Science (JBI-7603-2023)</a> &middot;
+<a href="https://www.linkedin.com/in/mahmoud-m-abdelati-2515511b3/">LinkedIn</a></p>
+
+<h2>Education and positions</h2>
+<ul>
+<li>Instructor, Chemistry Department<br>Faculty of Science, Fayoum University</li>
+<li>MSc Organic Chemistry<br>Fayoum University</li>
+<li>BSc Chemistry<br>Fayoum University</li>
+</ul>
+
+<h2 id="publications">Publications</h2>
+<p class="pub"><a href="https://doi.org/10.1038/s41598-026-37625-5">Rational Design and Antibacterial Assessment of Novel Pyranopyrazole Derivatives: a Combined Experimental and In Silico Study</a><br>M. M. Abdelatty, A. A. Makhlouf, M. E. Moustapha, A. M. Yossef, Z. R. Farag. Scientific Reports, 16, 11621 (2026). (open access)</p>
+<p class="pub"><a href="https://doi.org/10.1016/j.est.2025.119030">Tailoring of Amorphous Vanillin-Based Benzoxazine Polymer as a High-Performance Electrode for Symmetrical Supercapacitor</a><br>Z. R. Farag, M. E. Moustapha, M. M. Abdelatty, H. S. H. Mohamed. Journal of Energy Storage, 140 (2025) 119030. Cited by 3 (<a href="https://scholar.google.com/citations?user=Wxlva7YAAAAJ&hl=en">Google Scholar</a>, 2026-11-26).</p>
+<p class="pub"><a href="https://doi.org/10.1155/2023/6623445">Synthesis, Antimicrobial Studies, and Molecular Docking Simulation of Novel Pyran, Pyrazole, and Pyranopyrazole Derivatives</a><br>M. M. Abdelatty, Z. R. Farag, A. El Hassane, M. E. Moustapha, A. A. Makhlouf, A. M. Yossef. Journal of Chemistry, vol. 2023, Article ID 6623445. (open access) Cited by 10 (<a href="https://scholar.google.com/citations?user=Wxlva7YAAAAJ&hl=en">Google Scholar</a>, 2026-11-26).</p>
+<p class="pub"><a href="https://doi.org/10.21608/fjard.2023.311856">Synthesis, Characterization, In vitro Antibacterial, and Molecular Modeling Study of Some Pyrazole and Pyranopyrazole Derivatives</a><br>M. M. Abdelatty, Z. R. Farag, A. M. Yossef, A. A. Makhlouf. Fayoum Journal of Agricultural Research and Development, 37 (3), 478-493 (2023). (open access) Cited by 4 (<a href="https://scholar.google.com/citations?user=Wxlva7YAAAAJ&hl=en">Google Scholar</a>, 2026-11-26).</p>
+
+<h2>Conference presentations</h2>
+<ul>
+<li>Symposium on Medicinal Chemistry, Chinese Pharmaceutical Association, Xinjiang Medical University, Xinjiang, China. Poster: Synthesis and medicinal chemobiological evaluation of novel pyrazoles as potential antimicrobial agents.</li>
+<li>The 19th National Synthetic Organic Chemistry Symposium, Jiangsu Suzhou, China. Poster: Synthesis of novel pyranopyrazoles as potential antibacterial agents.</li>
+<li>ICBSEA 2018, Fayoum University, 3-5 Apr 2018. Poster: Formulating new nano fertilizers for enhanced seed germination, plant nutrition, and production in wheat under stress.</li>
+</ul>
+</main>
+<footer>
+<p>Contact: <a href="mailto:mma34@fayoum.edu.eg">mma34@fayoum.edu.eg</a> &middot; Chemistry Department, Faculty of Science, Fayoum University, 63514 Fayoum, Egypt.</p>
+
+<!-- Privacy-friendly visitor counter: GoatCounter (free, donation-supported, no cookies).
+Dashboard: https://mahmoud-abdelatty.goatcounter.com -->
+<script data-goatcounter="https://mahmoud-abdelatty.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<p class="small" id="site-visits" hidden>Unique visitors to this page: <span id="sv-count"></span></p>
+<script>
+fetch('https://mahmoud-abdelatty.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json')
+  .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(function (d) {
+    document.getElementById('sv-count').textContent = d.count_unique;
+    document.getElementById('site-visits').hidden = false;
+  })
+  .catch(function () { /* counter unavailable; line stays hidden */ });
+</script>
+
+</footer>
+</body>
+</html>

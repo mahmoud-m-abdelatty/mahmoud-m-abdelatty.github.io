@@ -1,0 +1,41 @@
+{
+  "published": [
+    {
+      "title": "Rational Design and Antibacterial Assessment of Novel Pyranopyrazole Derivatives: a Combined Experimental and In Silico Study",
+      "authors": "M. M. Abdelatty, A. A. Makhlouf, M. E. Moustapha, A. M. Yossef, Z. R. Farag",
+      "venue": "Scientific Reports, 16, 11621 (2026)",
+      "doi": "10.1038/s41598-026-37625-5",
+      "scholar_citations": 0,
+      "open_access": true,
+      "openalex_citations": 1
+    },
+    {
+      "title": "Tailoring of Amorphous Vanillin-Based Benzoxazine Polymer as a High-Performance Electrode for Symmetrical Supercapacitor",
+      "authors": "Z. R. Farag, M. E. Moustapha, M. M. Abdelatty, H. S. H. Mohamed",
+      "venue": "Journal of Energy Storage, 140 (2025) 119030",
+      "doi": "10.1016/j.est.2025.119030",
+      "scholar_citations": 3,
+      "open_access": false,
+      "openalex_citations": 3
+    },
+    {
+      "title": "Synthesis, Antimicrobial Studies, and Molecular Docking Simulation of Novel Pyran, Pyrazole, and Pyranopyrazole Derivatives",
+      "authors": "M. M. Abdelatty, Z. R. Farag, A. El Hassane, M. E. Moustapha, A. A. Makhlouf, A. M. Yossef",
+      "venue": "Journal of Chemistry, vol. 2023, Article ID 6623445",
+      "doi": "10.1155/2023/6623445",
+      "scholar_citations": 10,
+      "open_access": true,
+      "openalex_citations": 13
+    },
+    {
+      "title": "Synthesis, Characterization, In vitro Antibacterial, and Molecular Modeling Study of Some Pyrazole and Pyranopyrazole Derivatives",
+      "authors": "M. M. Abdelatty, Z. R. Farag, A. M. Yossef, A. A. Makhlouf",
+      "venue": "Fayoum Journal of Agricultural Research and Development, 37 (3), 478-493 (2023)",
+      "doi": "10.21608/fjard.2023.311856",
+      "scholar_citations": 4,
+      "open_access": true,
+      "openalex_citations": 4
+    }
+  ],
+  "scholar_as_of": "2026-11-26"
+}

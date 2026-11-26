@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact - Mahmoud M. Abdelatty</title>
+<style>
+body { font-family: 'Times New Roman', Times, serif; margin: 0; color: #1a1a1a; background: #fff; }
+header.site { border-bottom: 3px double #1a3a5c; padding: 28px 20px 18px; max-width: 900px; margin: 0 auto; }
+header.site h1 { font-size: 30px; margin: 0 0 4px; color: #1a3a5c; }
+header.site .role { font-size: 17px; color: #444; }
+nav.site { max-width: 900px; margin: 0 auto; padding: 10px 20px; border-bottom: 1px solid #ccc; font-size: 16px; }
+nav.site a { margin-right: 22px; color: #1a3a5c; }
+main { max-width: 900px; margin: 0 auto; padding: 12px 20px 60px; }
+h2 { font-size: 22px; color: #1a3a5c; border-bottom: 1px solid #ccc; padding-bottom: 4px; margin-top: 36px; }
+p, li { font-size: 16px; line-height: 1.55; text-align: justify; }
+.mwrap { overflow-x: auto; }
+table.metrics { border-collapse: collapse; margin: 10px 0; }
+table.metrics th, table.metrics td { border: 1px solid #bbb; padding: 6px 14px; font-size: 15px; text-align: left; }
+table.metrics th { background: #eef2f6; }
+.pub { margin: 0 0 14px; }
+.pub .status { font-weight: bold; }
+.small { font-size: 13px; color: #666; }
+a { color: #1a3a5c; }
+.carousel { margin: 14px 0 4px; text-align: center; }
+.carousel img { max-width: 100%; max-height: 430px; border: 1px solid #ddd; padding: 8px; background: #fff; }
+.carousel .bar { margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 14px; }
+.carousel button { font-family: inherit; font-size: 20px; width: 40px; height: 36px; cursor: pointer; }
+.carousel .cap { font-size: 14px; color: #555; }
+.dots span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ccc; margin: 6px 3px 0; }
+.dots span.on { background: #1a3a5c; }
+form.contact label { display: block; margin: 14px 0 4px; font-size: 16px; }
+form.contact input, form.contact textarea { width: 100%; max-width: 560px; font-family: inherit; font-size: 16px; padding: 8px; border: 1px solid #999; }
+form.contact button { margin-top: 16px; font-family: inherit; font-size: 17px; padding: 10px 26px; background: #1a3a5c; color: #fff; border: 0; cursor: pointer; }
+footer { max-width: 900px; margin: 0 auto; padding: 18px 20px 40px; border-top: 1px solid #ccc; font-size: 13px; color: #666; }
+</style>
+</head>
+<body>
+<header class="site">
+  <h1>Mahmoud M. Abdelatty</h1>
+  <div class="role">Instructor and researcher, Chemistry Department, Faculty of Science, Fayoum University, Egypt</div>
+</header>
+<nav class="site">
+  <a href="index.html">Profile</a>
+  <a href="index.html#publications">Publications</a>
+  <a href="index.html#metrics">Metrics</a>
+  <a href="contact.html">Contact &amp; collaboration</a>
+</nav>
+
+<main>
+<h2>Contact &amp; collaboration</h2>
+<p>I welcome collaboration on heterocyclic synthesis, benzoxazine-based polymers for energy storage, MOF-based composites for tumor therapy, and molecular docking studies. Write to me through the form below, or directly at <a href="mailto:mma34@fayoum.edu.eg">mma34@fayoum.edu.eg</a>.</p>
+
+<!-- This form posts to Formspree (free plan, 50 submissions/month, 30-day archive).
+Submissions arrive in the site owner's email inbox. The _gotcha field is a hidden honeypot: spam bots fill it, humans never see it. -->
+<form class="contact" action="https://formspree.io/f/mjywllwd" method="POST">
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+  <label for="f-name">Your name</label>
+  <input id="f-name" name="name" type="text" required>
+  <label for="f-email">Your email</label>
+  <input id="f-email" name="email" type="email" required>
+  <label for="f-affil">Your affiliation</label>
+  <input id="f-affil" name="affiliation" type="text">
+  <label for="f-msg">Your project or enquiry</label>
+  <textarea id="f-msg" name="message" rows="7" required></textarea>
+  <button type="submit">Send</button>
+</form>
+<p class="small">Messages sent here arrive by email; expect a reply at the address you give.</p>
+</main>
+<footer>
+<p>Chemistry Department, Faculty of Science, Fayoum University, 63514 Fayoum, Egypt.</p>
+
+<!-- Privacy-friendly visitor counter: GoatCounter (free, donation-supported, no cookies).
+Dashboard: https://mahmoud-abdelatty.goatcounter.com -->
+<script data-goatcounter="https://mahmoud-abdelatty.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<p class="small" id="site-visits" hidden>Unique visitors to this page: <span id="sv-count"></span></p>
+<script>
+fetch('https://mahmoud-abdelatty.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json')
+  .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(function (d) {
+    document.getElementById('sv-count').textContent = d.count_unique;
+    document.getElementById('site-visits').hidden = false;
+  })
+  .catch(function () { /* counter unavailable; line stays hidden */ });
+</script>
+
+</footer>
+</body>
+</html>
